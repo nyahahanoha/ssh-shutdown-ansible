@@ -1,0 +1,9 @@
+---
+- hosts: machines
+  become: yes
+  gather_facts: no
+  tasks:
+    # - name: Ping Connection
+    # ansible.builtin.ping:
+  - name: shutdown
+    ansible.builtin.shell: shutdown -h now
